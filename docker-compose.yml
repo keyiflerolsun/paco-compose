@@ -1,0 +1,16 @@
+services:
+  paco-compose:
+    container_name : paco-compose
+    image          : paco-compose:latest
+    restart        : always
+    build          : .
+
+    command        : /bin/bash
+    tty            : true
+    stdin_open     : true
+    volumes        :
+      - /home:/home
+      - /goinfre:/goinfre
+      - /goinfre/paco-temp:/francinette/temp
+      - /sgoinfre:/sgoinfre
+      - /sgoinfre/paco-logs:/francinette/logs
